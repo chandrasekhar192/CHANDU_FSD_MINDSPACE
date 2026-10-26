@@ -1,0 +1,329 @@
+/* ==================== Mood Tracker ==================== */
+.mood-tracker-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+/* Mood Selector */
+.mood-selector {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mood-selector-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-width: 72px;
+}
+
+.mood-selector-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.mood-selector-btn.selected {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(91, 143, 185, 0.2);
+  background: var(--primary-bg);
+}
+
+.mood-selector-emoji {
+  font-size: 2rem;
+}
+
+.mood-selector-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.mood-selector-btn.selected .mood-selector-label {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* Mood Badge */
+.mood-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-white);
+  white-space: nowrap;
+}
+
+.mood-badge-emoji {
+  font-size: 0.9rem;
+}
+
+/* Mood Form */
+.mood-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.mood-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.mood-form-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Intensity Slider */
+.intensity-slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.intensity-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, var(--mood-bad), var(--mood-okay), var(--mood-great));
+}
+
+.intensity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.intensity-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.intensity-value {
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary);
+  font-size: 0.9rem;
+}
+
+/* Activities Grid */
+.activities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.activity-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 6px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  background: var(--bg-card);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+}
+
+.activity-chip:hover {
+  border-color: var(--primary-light);
+  background: var(--primary-bg);
+}
+
+.activity-chip.selected {
+  background: var(--primary);
+  color: var(--text-white);
+  border-color: var(--primary);
+}
+
+.activity-chip-icon {
+  font-size: 1rem;
+}
+
+/* Energy Selector */
+.energy-selector {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.energy-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: 6px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+}
+
+.energy-btn:hover {
+  border-color: var(--primary-light);
+}
+
+.energy-btn.selected {
+  background: var(--accent-teal);
+  color: var(--text-white);
+  border-color: var(--accent-teal);
+}
+
+/* Mood Card */
+.mood-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: box-shadow var(--transition-normal);
+}
+
+.mood-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.mood-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.mood-card-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.mood-card-date {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.mood-card-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.mood-card-action-btn {
+  background: none;
+  border: none;
+  padding: var(--spacing-xs);
+  color: var(--text-light);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  transition: all var(--transition-fast);
+}
+
+.mood-card-action-btn:hover {
+  background: var(--bg-main);
+  color: var(--text-primary);
+}
+
+.mood-card-action-btn.delete:hover {
+  color: var(--danger);
+}
+
+.mood-card-intensity {
+  margin-bottom: var(--spacing-sm);
+}
+
+.intensity-bar {
+  height: 4px;
+  background: var(--border-light);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.intensity-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width var(--transition-normal);
+}
+
+.intensity-label {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+.mood-card-note {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-sm);
+}
+
+.mood-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.mood-card-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  background: var(--bg-main);
+  border-radius: 12px;
+  color: var(--text-secondary);
+}
+
+.mood-card-energy {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+/* Mood entries list */
+.mood-entries-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.load-more-btn {
+  display: block;
+  margin: var(--spacing-lg) auto 0;
+}
+
+@media (max-width: 1024px) {
+  .mood-tracker-grid {
+    grid-template-columns: 1fr;
+  }
+}

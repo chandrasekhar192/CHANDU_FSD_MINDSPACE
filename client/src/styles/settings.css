@@ -1,0 +1,80 @@
+/* ==================== Settings ==================== */
+.settings-page {
+  max-width: 600px;
+}
+
+.settings-section {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.settings-section-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.settings-user-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.settings-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.settings-info-row:last-child {
+  border-bottom: none;
+}
+
+.settings-info-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.settings-info-value {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.settings-actions {
+  margin-top: var(--spacing-lg);
+}
+
+.settings-app-info {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.settings-disclaimer {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: 0 auto;
+}
